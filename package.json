@@ -1,0 +1,38 @@
+{
+  "name": "JMS",
+  "version": "1.0.0",
+  "description": "JMS",
+  "main": "app.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register",
+    "start": "node app.js",
+    "dev": "webpack -d --watch",
+    "build": "webpack -p"
+  },
+  "author": "jonstew@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "animated-scroll": "^0.0.1",
+    "express": "^4.15.2",
+    "gulp-sass": "^3.1.0",
+    "jquery": "^3.2.1",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.11.0",
+    "proptypes": "^0.14.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-hover": "^1.0.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "gulp": "^3.9.1",
+    "webpack": "^3.6.0",
+    "yarn": "^1.1.0"
+  },
+  "repository": "https://github.com/Kongfujonstew/JMS.git"
+}
