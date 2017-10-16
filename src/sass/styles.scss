@@ -23,6 +23,7 @@ $footer-height: 200px;
 @import 'base';
 @import 'text';
 @import 'modal';
+@import 'slider';
 @import 'screen';
 
 
@@ -120,7 +121,7 @@ nav {
     width: $bar-width;
     transition: $hover-transition-formula;
     &:hover {
-      border-color: brighten($link-color, 80%);
+      border-color: rgba($link-color, .20);
       background-color: rgba($link-color, .20);
       color: $link-color;
     }

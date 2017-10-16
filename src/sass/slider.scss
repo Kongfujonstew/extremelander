@@ -1,0 +1,53 @@
+$arrow-width: 90px;
+$left-arrow-padding-left: 65px;
+
+#slider {
+  height: 80%;
+  position: relative;
+  .arrow {
+    background-color: black;
+    color: white;
+    position: fixed;
+    height: 80%;
+    width: $arrow-width;
+    min-width: 30px;
+    padding-top: 38%;
+    &:hover {
+      color: $link-color;
+    }
+  }
+  .left {
+    left: 0;
+    padding-left: $left-arrow-padding-left;
+    top: $arrow-width;
+  }
+  .right {
+    top: $arrow-width;
+    padding-left: 5px;
+    right: 0;
+  }
+}
+
+#sliderContainer {
+  margin-top: $arrow-width;
+  padding: 0 $arrow-width 0 $arrow-width;
+}
+
+#currentSlider {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  flex-direction: row;
+  margin-left: -100%;
+  transition: margin-left .4s ease-out;
+  width: 300%;  
+}
+
+.sliderBox {
+  background-color:yellow;
+  color: white;
+  height: 100%;
+  width: 100%;
+}

@@ -45,7 +45,6 @@ class CTA extends React.Component {
   }
 
   handleChange () {
-    console.log('handleChange fired')
     const isValid = this.validateInput();
     let ctaButton;
     if (isValid) {
@@ -68,13 +67,20 @@ class CTA extends React.Component {
   }
 
   handleCTAClick (e) {
+    e.preventDefault();
     const isValid = this.validateInput();
     if (isValid) {
-      const input = document.getElementsByClassName(this.props.inputClassName)[0].value;
+      //wrong!!! ctaButton should be the input
+      const ctaInput = document.getElementsByClassName(this.props.inputClassName)[0];
+      const input = ctaInput.value;
       this.saveInput(input);
+      setTimeout(() => {
+        ctaInput.value = '';
+        this.setState({isInputValid: false});
+      }, 3000);
+      //this shouldn't need to click the click button
       return;
     } else {
-    console.log('yes')
       this.setState({
         placeholderText:'ENTER A VALID ADDRESS',
         placeholderColor:'red'
@@ -83,14 +89,21 @@ class CTA extends React.Component {
   }
 
   handleEnterKey (e) {
+    e.preventDefault();
     const isValid = this.validateInput();
     let ctaButton;
     if (isValid && e.charCode === 13) {
-      e.preventDefault();
-      const input = document.getElementsByClassName(this.props.inputClassName)[0].value;
+      //wrong!!! ctaButton should be the input
+      const ctaButton = $('.ctaButton')[0];
+      const ctaInput = document.getElementsByClassName(this.props.inputClassName)[0];
+      const input = ctaInput.value;
       this.saveInput(input);
-      ctaButton = document.querySelector('.cta .right');
       ctaButton.click();
+      setTimeout(() => {
+        ctaInput.value = '';
+        this.setState({isInputValid: false});
+      }, 3000);
+      //needs to click the real cta button
     }
   }
 
@@ -113,9 +126,8 @@ class CTA extends React.Component {
 
     return (
       <div className="cta {this.props.ctaClassName}">
-        <Link className="right hover" style={this.state.inputIsValid ? validStyle : null}
+        <Link className="ctaButton right hover" style={this.state.inputIsValid ? validStyle : null}
           to={this.state.inputIsValid ? '/enter' : '/'}
-          ref={'button'}
           onClick={this.handleCTAClick.bind(this)}
         >LEARN MORE →</Link>
         <div className="left">

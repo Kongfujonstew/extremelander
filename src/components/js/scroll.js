@@ -3,7 +3,9 @@ import $ from 'jquery';
 export default () => {
   $(document).ready(function(){
         // $fn.scrollSpeed(step, speed, easing);
-        jQuery.scrollSpeed(300, 750);
+        let thisWindowStep = document.body.clientHeight/5;
+        console.log('client height: ', document.body.clientHeight);
+        jQuery.scrollSpeed(thisWindowStep, 750);
   });
 
   // Custom scrolling speed with jQuery

@@ -1,5 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Link } from 'react-router-dom';
+import Slider from '../slider/Slider';
 
 class Modal extends React.Component {
   constructor (props) {
@@ -17,7 +19,8 @@ class Modal extends React.Component {
   render () {
     return (
       <div id="modal">
-        HELLO
+        <Link id="closeModal" to={'/'} >X</Link>
+        <Slider />
       </div>
     )
   }
