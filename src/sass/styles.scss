@@ -21,6 +21,7 @@ $footer-height: 200px;
 
 
 @import 'base';
+@import 'content';
 @import 'text';
 @import 'modal';
 @import 'slider';
@@ -46,7 +47,6 @@ nav {
     float: right;
   }
 }
-
 
 #hero {
   color: $main-text-color;
@@ -80,12 +80,6 @@ nav {
       transition: $hover-transition-formula;
     }
   }
-}
-
-.content {
-  background-color: white;
-  height: 900px;
-  z-index: -1;
 }
 
 .cta {
@@ -131,7 +125,7 @@ nav {
   }
   .placeholder {
     left: 15px;
-    top: 20px;
+    top: 23px;
     position: absolute;
     transition: all .4s ease-out;
     z-index: -1;
@@ -143,26 +137,6 @@ nav {
 
 }
 
-
-
-#content1 {
-  #logos {
-    display: block;
-    filter: grayscale(100%);
-    margin: 0 auto;
-    width: 80%;
-  }
-}
-
-
-#content3 {
-  #container {
-    background-color: black;
-    height: 100%;
-    margin: 0 auto;
-    width: 65%;
-  }
-}
 
 .footermargin {
   margin-bottom: $footer-height;

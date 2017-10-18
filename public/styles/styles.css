@@ -31,6 +31,32 @@ input:focus {
 .hover {
   cursor: pointer; }
 
+.content {
+  background-color: white;
+  min-height: 100%;
+  z-index: -1; }
+
+#content1 #logos {
+  display: block;
+  filter: grayscale(100%);
+  margin: 0 auto;
+  width: 80%; }
+
+#content2 {
+  height: 400%;
+  position: relative;
+  z-index: 10; }
+  #content2 #ball {
+    position: absolute;
+    top: 0;
+    right: 200px; }
+
+#content3 #container {
+  background-color: black;
+  height: 100%;
+  margin: 0 auto;
+  width: 65%; }
+
 body {
   font-size: 22px; }
 
@@ -196,11 +222,6 @@ nav {
     color: red;
     transition: all 0.2s ease-out; }
 
-.content {
-  background-color: white;
-  height: 900px;
-  z-index: -1; }
-
 .cta {
   display: flex;
   flex-direction: row-reverse;
@@ -239,25 +260,13 @@ nav {
       background-color: rgba(0, 255, 255, 0.5); }
   .cta .placeholder {
     left: 15px;
-    top: 20px;
+    top: 23px;
     position: absolute;
     transition: all .4s ease-out;
     z-index: -1; }
   .cta .email {
     transform: translateY(8px);
     z-index: 10; }
-
-#content1 #logos {
-  display: block;
-  filter: grayscale(100%);
-  margin: 0 auto;
-  width: 80%; }
-
-#content3 #container {
-  background-color: black;
-  height: 100%;
-  margin: 0 auto;
-  width: 65%; }
 
 .footermargin {
   margin-bottom: 200px; }

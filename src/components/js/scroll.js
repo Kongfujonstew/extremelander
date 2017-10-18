@@ -4,8 +4,8 @@ export default () => {
   $(document).ready(function(){
         // $fn.scrollSpeed(step, speed, easing);
         let thisWindowStep = document.body.clientHeight/5;
-        console.log('client height: ', document.body.clientHeight);
-        jQuery.scrollSpeed(thisWindowStep, 750);
+        // console.log('client height: ', document.body.clientHeight);
+        jQuery.scrollSpeed(175, 750);
   });
 
   // Custom scrolling speed with jQuery
@@ -77,3 +77,44 @@ export default () => {
       
   })(jQuery);
 };
+
+
+      // $window.on('mousewheel DOMMouseScroll', (e) => {
+      //   let deltaY = e.originalEvent.wheelDeltaY,
+      //   detail = e.originalEvent.detail;
+      //   scrollY = $document.height() > $window.height();
+      //   scrollX = $document.width() > $window.width();
+      //   scroll = true;
+        
+      //   if (scrollY) {
+      //     view = $window.height();
+      //     if (deltaY < 0 || detail > 0) {
+      //       let newRoot = window.root;
+      //       const windowHeight = window.innerHeight;
+      //       newRoot = (window.root + view) >= $document.height() ? window.root : window.root += step;
+      //       while (newRoot % (windowHeight/10) !== 0) {
+      //         newRoot++;
+      //       };
+      //       console.log('new Root: ', newRoot)
+      //       window.root = newRoot;
+      //       // window.root = (window.root + view) >= $document.height() ? window.root : window.root += step;
+      //     }
+      //     if (deltaY > 0 || detail < 0) {
+      //       let newRoot = window.root;
+      //       const windowHeight = window.innerHeight;
+      //       newRoot = window.root <= 0 ? 0 : window.root -= step;
+      //       while (newRoot % (windowHeight/10) !== 0) {
+      //         newRoot--;
+      //       };
+      //       console.log('new Root A: ', newRoot);
+      //       window.root = newRoot;
+      //       // window.root = window.root <= 0 ? 0 : window.root -= step;
+      //     }
+      //     $body.stop().animate({
+      //       scrollTop: window.root
+      //     }, speed, option, function() {
+      //       scroll = false;
+      //     });
+      //   }
+
+

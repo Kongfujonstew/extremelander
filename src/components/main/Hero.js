@@ -13,7 +13,6 @@ class Hero extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', (e) => {
-      console.log(document.body.scrollTop)
       window.root = document.body.scrollTop;
       if (this.props.showContent) {
         const scroll = document.body.scrollTop;
