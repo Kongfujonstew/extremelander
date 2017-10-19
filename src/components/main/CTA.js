@@ -67,10 +67,8 @@ class CTA extends React.Component {
   }
 
   handleCTAClick (e) {
-    e.preventDefault();
     const isValid = this.validateInput();
     if (isValid) {
-      //wrong!!! ctaButton should be the input
       const ctaInput = document.getElementsByClassName(this.props.inputClassName)[0];
       const input = ctaInput.value;
       this.saveInput(input);
@@ -78,7 +76,6 @@ class CTA extends React.Component {
         ctaInput.value = '';
         this.setState({isInputValid: false});
       }, 3000);
-      //this shouldn't need to click the click button
       return;
     } else {
       this.setState({
@@ -89,12 +86,13 @@ class CTA extends React.Component {
   }
 
   handleEnterKey (e) {
-    e.preventDefault();
     const isValid = this.validateInput();
     let ctaButton;
     if (isValid && e.charCode === 13) {
+      e.preventDefault();
       //wrong!!! ctaButton should be the input
-      const ctaButton = $('.ctaButton')[0];
+      const ctaButton = document.getElementById(this.props.ctaButtonId);
+      console.log(ctaButton);
       const ctaInput = document.getElementsByClassName(this.props.inputClassName)[0];
       const input = ctaInput.value;
       this.saveInput(input);
@@ -125,8 +123,8 @@ class CTA extends React.Component {
     const validStyle = {border: '1px solid lightgreen'};
 
     return (
-      <div className="cta {this.props.ctaClassName}">
-        <Link className="ctaButton right hover" style={this.state.inputIsValid ? validStyle : null}
+      <div className="cta">
+        <Link id={this.props.ctaButtonId} className="ctaButton right hover" style={this.state.inputIsValid ? validStyle : null}
           to={this.state.inputIsValid ? '/enter' : '/'}
           onClick={this.handleCTAClick.bind(this)}
         >LEARN MORE →</Link>

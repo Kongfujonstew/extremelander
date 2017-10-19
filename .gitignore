@@ -7,4 +7,6 @@ node_modules/
 ## Large files ##
 public/video
 
+## ENV ##
+.env
 

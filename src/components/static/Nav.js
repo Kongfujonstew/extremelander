@@ -1,5 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
+import { Link } from 'react-router-dom';
 
 class Nav extends React.Component {
   constructor () {
@@ -46,7 +47,7 @@ class Nav extends React.Component {
     return (
       <nav style={style}>
         <div className="logo hover">Jon Michael Stewart</div>
-        <div className="button hover">MENU</div>
+        <Link className="button hover"  to={'/menu'} >MENU</Link>
       </nav>
     )
   }

@@ -60,7 +60,7 @@ input:focus {
 body {
   font-size: 22px; }
 
-#modal {
+.modal {
   background-color: black;
   position: fixed;
   top: 0;
@@ -70,7 +70,7 @@ body {
   width: 100%;
   z-index: 1000; }
 
-#closeModal {
+.closeModal {
   color: white;
   line-spacing: 2;
   margin: 10px;
@@ -78,10 +78,10 @@ body {
   position: fixed;
   right: 0;
   text-align: center; }
-  #closeModal:hover {
+  .closeModal:hover {
     color: cyan; }
 
-#modal.loaded {
+.modal.loaded {
   -webkit-animation: fadein 1s;
   -moz-animation: fadein 1s;
   -ms-animation: fadein 1s;

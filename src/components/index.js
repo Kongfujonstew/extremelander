@@ -5,14 +5,16 @@ import scroll from './js/scroll';
 scroll();
 
 import Main from './main/Main';
-import Modal from './modal/Modal';
+import Enter from './modal/Enter';
+import Menu from './modal/Menu';
 import Nav from './static/Nav';
 import Footer from './static/Footer';
 
 render(<BrowserRouter location={window.location}>
           <div>
             <Nav />
-            <Route path="/enter" exact component={Modal} />
+            <Route path="/menu" exact component={Menu} />
+            <Route path="/enter" exact component={Enter} />
             <Route path="/" component={Main} />
             <Footer />
           </div>

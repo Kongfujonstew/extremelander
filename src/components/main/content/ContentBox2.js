@@ -11,7 +11,7 @@ class ContentBox2 extends React.Component {
         <Ball />
       
 
-        <CTA />
+        <CTA inputClassName={'content2CTA'} ctaButtonId={'content2CTAButton'}/>
       </div>
     )
   }

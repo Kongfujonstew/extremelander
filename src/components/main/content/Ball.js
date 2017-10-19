@@ -5,21 +5,18 @@ class Ball extends React.Component {
   constructor () {
     super();
     this.state = {
-      ballHeight: 500,
+      ballHeight: 0,
       ballColor: '#dfc12a'
     }
   }
 
   componentDidMount() {
-    console.log('ball mounted');
     window.addEventListener('scroll', (e) => {
-      const newBallHeight = 200;
       const scroll = document.body.scrollTop;
       const height = window.innerHeight;
-      // console.log(document.body.scrollTop)
-      // window.root = document.body.scrollTop;
-      if (scroll > height*2 && scroll < height * 4) {
-        // newBallHeight = this.state.ballHeight +=20;
+      if (scroll > height*2 && scroll < height * 5) {
+        const percent = (scroll-(height*2))/(height);
+        const newBallHeight = 1.2 * percent * height;
         this.setState({ ballHeight: newBallHeight})
       }
     });

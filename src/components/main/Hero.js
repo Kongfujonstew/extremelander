@@ -30,7 +30,7 @@ class Hero extends React.Component {
         <div id="heroBackground"></div>
         <div className="hero">
           <HeroText />
-          <CTA inputClassName={'heroCTA'} ctaClassName={'heroCTA'}/>
+          <CTA inputClassName={'heroCTA'} ctaButtonId={'heroCTAButton'}/>
           <div id="scrollButton" className="hover"
             onClick={this.props.clickForContent}
           >BUTTON ↓</div>
